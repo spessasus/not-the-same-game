@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title translate-path='locale.gameTitle'></title>
+    <link href='src/css/style.css' rel='stylesheet'>
+    <meta content='ie=edge' http-equiv='X-UA-Compatible'>
+    <meta content='columns=device-columns, initial-scale=1.0' name='viewport'>
+</head>
+<body>
+<div class='main'>
+    <div class='title'>
+        <h1 translate-path='locale.gameTitle'></h1>
+        <h3 translate-path='locale.author'></h3>
+        <h4 translate-path='locale.notFinished'></h4>
+    </div>
+    <div id='content'>
+        <div class='menu' id='main_menu'>
+            <div class='button' id='new_game' translate-path='locale.menuButtons.newGame'></div>
+            <div class='button' id='show_scores' translate-path='locale.menuButtons.showScores'></div>
+            <select class='button' id='language_select'>
+            </select>
+        </div>
+
+        <div class='menu hidden' id='difficulty_menu'>
+            <h2 translate-path='locale.difficultySelector.prompt'></h2>
+            <div class='button' id='easy' translate-path='locale.difficultySelector.easy'></div>
+            <div class='button' id='medium' translate-path='locale.difficultySelector.medium'></div>
+            <div class='button' id='hard' translate-path='locale.difficultySelector.hard'></div>
+            <div class='button' id='extreme' translate-path='locale.difficultySelector.extreme'></div>
+            <div class='button' id='go_back' translate-path='locale.goBack'></div>
+        </div>
+
+        <div class='hidden' id='scores_display'>
+            <h2 translate-path='locale.showScores.prompt'></h2>
+            <div class='difficulty_row'>
+                <div class='button' id='easy_scores' translate-path='locale.difficultySelector.easy'></div>
+                <div class='button' id='medium_scores' translate-path='locale.difficultySelector.medium'></div>
+                <div class='button' id='hard_scores' translate-path='locale.difficultySelector.hard'></div>
+                <div class='button' id='extreme_scores' translate-path='locale.difficultySelector.extreme'></div>
+            </div>
+            <div class='table_wrapper'>
+                <table id='score_table'>
+                    <tr>
+                        <th translate-path='locale.showScores.name'></th>
+                        <th translate-path='locale.showScores.score'></th>
+                        <th translate-path='locale.showScores.date'></th>
+                    </tr>
+                </table>
+            </div>
+            <div class='button' id='clear_scores' translate-path='locale.showScores.clear.button'></div>
+            <div class='button' id='back_to_main' translate-path='locale.goBack'></div>
+        </div>
+
+        <div class='hidden' id='game'>
+            <h3 id='game_difficulty'></h3>
+            <canvas id='game_canvas'>
+            </canvas>
+            <div class='game_info_row'>
+                <h2><span translate-path='locale.game.score'></span><span class='display_split' id='game_score'></span>
+                </h2>
+                <h2><span translate-path='locale.game.clickScore'></span><span class='display_split'
+                                                                               id='game_click_score'></span></h2>
+                <h2><span translate-path='locale.game.moves'></span><span class='display_split' id='game_moves'></span>
+                </h2>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class='notification_field'></div>
+<script src='src/js/main.js' type='module'></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.difficulty_row {
+    display: flex;
+}
+
+.table_wrapper {
+    width: 100%;
+    margin: auto;
+    height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#score_table {
+    width: 100%;
+    border: solid var(--font-color) 1px;
+    border-radius: var(--primary-border-radius);
+}
+
+#clear_scores {
+    width: max-content;
+    margin: auto;
+}
+
+#scores_display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nothing_to_show {
+    font-style: italic;
+}

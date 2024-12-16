@@ -1,0 +1,26 @@
+#game {
+    width: 100%;
+}
+
+.game_info_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#game_canvas {
+    background: black;
+    border-radius: var(--primary-border-radius);
+    height: 50vh;
+    cursor: pointer;
+}
+
+#game_canvas.mobile {
+    height: unset !important;
+    width: 70vw;
+}
+
+.display_split {
+    margin-left: 1ch;
+}
